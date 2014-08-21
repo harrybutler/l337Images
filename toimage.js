@@ -34,14 +34,14 @@ element = document.getElementById("canvas1");
 c = element.getContext("2d");
 
 // read the width and height of the canvas
-width = cWidth;
-height = "1";
+width = element.width;
+height = element.height;
 
 // create a new pixel array
 imageData = c.createImageData(width, height);
 
 // draw random dots
-for (i = 0; i < cWidth; i++) {
+for (i = 0; i < 10000; i++) {
     x = Math.random() * width | 0; // |0 to truncate to Int32
     y = Math.random() * height | 0;
     r = Math.random() * 256 | 0;
