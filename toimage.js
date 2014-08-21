@@ -22,17 +22,12 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
 } else {
     alert('The File APIs are not fully supported in this browser.');
 }
-var canvas = document.createElement('canvas1');
-
-canvas.id = "canvas1";
-canvas.width = cWidth;
-canvas.height = 1;
-canvas.style.zIndex = 8;
-canvas.style.position = "absolute";
-
-
-var body = document.getElementsByTagName("body")[0];
-body.appendChild(canvas1);
+document.body.innerHTML += '<canvas id="canvas1"></canvas>'; 
+document.getElementById('someBox').innerHTML = '<canvas id="canvas1"></canvas>';
+var canvas = document.getElementById('canvas1');
+canvas.width  = 100;
+canvas.height = 100;
+var pixels = canvas.width * canvas.height
 function setPixel(imageData, x, y, r, g, b, a) {
     index = (x + y * imageData.width) * 4;
     imageData.data[index+0] = r;
@@ -52,7 +47,7 @@ height = element.height;
 imageData = c.createImageData(width, height);
 
 // draw random dots
-for (i = 0; i < 10000; i++) {
+for (i = 0; i < pixels; i++) {
     x = Math.random() * width | 0; // |0 to truncate to Int32
     y = Math.random() * height | 0;
     r = Math.random() * 256 | 0;
