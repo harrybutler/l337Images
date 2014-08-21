@@ -22,6 +22,17 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
 } else {
     alert('The File APIs are not fully supported in this browser.');
 }
+var canvas = document.createElement('canvas1');
+
+canvas.id = "canvas1";
+canvas.width = cWidth;
+canvas.height = 1;
+canvas.style.zIndex = 8;
+canvas.style.position = "absolute";
+
+
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(canvas1);
 function setPixel(imageData, x, y, r, g, b, a) {
     index = (x + y * imageData.width) * 4;
     imageData.data[index+0] = r;
