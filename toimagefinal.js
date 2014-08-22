@@ -1,16 +1,9 @@
 var num;
-var str = document.getElementById('base64textarea').value;
-function base64_to_base10(str) {
-    var order = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-";
-    var base = order.length;
-    var num = 0, r;
-    while (str.length) {
-        r = order.indexOf(str.charAt(0));
-        str = str.substr(1);
-        num *= base;
-        num += r;
-    }
-    return num;
+var str = "Zmhzc2Zoc2Zoc2ZoZmhzZmhz"; //document.getElementById('base64textarea').value;
+function base64_to_base10() {
+    var base10Alphabet = [4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172, 176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228, 232, 236, 240, 244, 248, 252, 256, 260, 264, 268, 272, 276, 280, 284, 288, 292, 296, 300, 304, 308, 312, 316, 320, 324, 328, 332, 336, 340, 344, 348, 352, 356, 360, 364, 368, 372, 376, 380, 384, 388, 392, 396, 400]
+    var base64Alphabet = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,-,_]
+document.getElementById('base64textarea').value = num;     
 }
 document.body.innerHTML += '<canvas id="canvas1"></canvas>';
 document.getElementById('someBox').innerHTML = '<canvas id="canvas1"></canvas>';
