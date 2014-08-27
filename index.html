@@ -1,17 +1,21 @@
-<html>
+<!DOCTYPE html>
 <head>
+<!--[if lt IE 9]>
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 <script src="/toimage.js"></script>
 </head>
-<body>
-<div>
+<body><div id ="headerblock">
+<header><center><h1>1337 Images</h1></center></header>
+<center><p>Idk why but every page that is just in default html style seem to be more high tech, 1337haxor looking *guyfawkesmask.jpg*</p></center>
+</div><section><div>
     <div>
         <label for="filePicker">Choose or drag a file:</label><br>
         <input type="file" id="filePicker">
     </div>
     <br>
     <div>
-    <form action="welcome.php" method="post"
-     <input type="submit">
+    <form action="welcome.php" method="post">
      <h1>Base64 encoded version</h1>
      <textarea id="base64textarea" placeholder="Base64 will appear here" cols="50" rows="15" name="base64textarea"></textarea>
     </form>
@@ -21,5 +25,6 @@
         <button onclick="toImage()">Convert</button>
 <div id="someBox">
 </div>
+</section>
 </body>
 </html>
